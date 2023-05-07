@@ -3,10 +3,12 @@
   <head>
     <title>Screen Size Example</title>
     <script>
-      // Get the screen size and log it to the console
+      // Get the screen size and display it below the h1 tag
       const screenWidth = window.screen.width;
       const screenHeight = window.screen.height;
-      console.log(`Screen size is ${screenWidth} x ${screenHeight}`);
+      const screenSizeElem = document.createElement('p');
+      screenSizeElem.textContent = `Screen size is ${screenWidth} x ${screenHeight}`;
+      document.querySelector('h1').after(screenSizeElem);
     </script>
   </head>
   <body>
